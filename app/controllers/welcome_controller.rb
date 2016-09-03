@@ -6,5 +6,7 @@ class WelcomeController < ApplicationController
   end
 
   def about
+    @color = params[:color]
+    @size = params[:size].to_i
   end
 end
