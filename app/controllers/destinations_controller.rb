@@ -4,7 +4,11 @@ class DestinationsController < ApplicationController
   # GET /destinations
   # GET /destinations.json
   def index
-    @destinations = Destination.all
+    if params[:country] == nil
+      @destinations = Destination.all
+    else
+      @destinations = Destination.where(country: params[:country].titleize)
+    end
   end
 
   # GET /destinations/1

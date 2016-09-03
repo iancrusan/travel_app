@@ -1,3 +1,14 @@
+<ul class="nav nav-pills" role="tablist">
+  <li><%= link_to "All", destinations_path %></li>
+  <li><%= link_to "New Zealand", destinations_path(country: "new_zealand") %></li>
+  <li><%= link_to "Germany", destinations_path(country: "germany") %></li>
+  <li><%= link_to "England", destinations_path(country: "england") %></li>
+  <li><%= link_to "Saudi Arabia", destinations_path(country: "saudi_arabia") %></li>
+  <li><%= link_to "Papua New Guinea", destinations_path(country: "papua_new_guinea") %></li>
+  <li><%= link_to "Brazil", destinations_path(country: "brazil") %></li>
+  <li><%= link_to "Canada", destinations_path(country: "canada") %></li>
+</ul>
+
 <% if notice != nil %>
   <p id="notice" class="alert alert-success" role="alert">
     <%= notice %>
