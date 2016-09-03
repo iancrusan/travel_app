@@ -8,6 +8,25 @@
 <% end %>
 </ul>
 
+<ul>
 <% @travel_pics.each do |pic| %>
-<%= image_tag pic, class: "img-responsive" %>
+<li><%= image_tag pic, class: "img-responsive" %></li>
 <% end %>
+</ul>
+
+<table class="table">
+  <tr>
+    <% @united_states.each do |key, value| %>
+    <th><%= key.titleize %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <% @united_states.each do |key, value| %>
+    <% if value.kind_of?(Array) %>
+    <td><%= value.join(", ") %></td>
+    <% else %>
+    <td><%= value %></td>
+    <% end %>
+    <% end %>
+  </tr>
+</table>
