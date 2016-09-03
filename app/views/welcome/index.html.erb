@@ -1,18 +1,18 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Welcome to Travel App!</h1>
+<p>Checkout all the places I have been to!</p>
 
-<%= @homeland %>
-<ul>
+<%= @homeland %><br>
+
 <% @countries.each do |country| %>
-<li><%= country %></li>
+<p><%= country %></p>
 <% end %>
-</ul>
 
-<ul>
+
+
 <% @travel_pics.each do |pic| %>
-<li><%= image_tag pic, class: "img-responsive" %></li>
+<p><%= image_tag pic, class: "img-responsive" %></p>
 <% end %>
-</ul>
+
 
 <table class="table">
   <tr>
