@@ -9,6 +9,8 @@ class DestinationsController < ApplicationController
     else
       @destinations = Destination.where(country: params[:country].titleize)
     end
+
+    @my_countries = Destination.select(:country).order(:country).distinct
   end
 
   # GET /destinations/1
