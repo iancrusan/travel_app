@@ -7,3 +7,7 @@
 <li><%= country %></li>
 <% end %>
 </ul>
+
+<% @travel_pics.each do |pic| %>
+<%= image_tag pic %>
+<% end %>
